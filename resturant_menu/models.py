@@ -19,7 +19,7 @@ class Item(models.Model):
     price = models.DecimalField(decimal_places=2, max_digits=10)
     meal_type = models.CharField(choices=MEAL_TYPE, max_length=200)
     author = models.ForeignKey(User, on_delete=models.PROTECT)
-    staus = models.IntegerField(choices=STATUS, default=1)
+    status = models.IntegerField(choices=STATUS, default=1)
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
 
